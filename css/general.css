@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/*
+
+Shorthand:
+
+margin: 40px; all 4 sides
+margin 40 auto; top/bottom right/left
+margin: 40px auto 0; top right/left bottom
+margin: 40px 30px 5px 10px; top right bottom left
+
+Start at the top, then continue clockwise around the box.
+
+Units of measurement
+
+Width = %
+Hieght = rem
+Type = rem
+Graphics = px (e.g. "border" would be considered a graphic)
+
+Reminder: the child determines the height of the parent element.
+
+/* Controls the size of the viewport */
+
+@-moz-viewport { width: device-width; scale: 1; } /* Firefox */
+@-ms-viewport { width: device-width; scale: 1; } /* Microsoft */
+@-o-viewport { width: device-width; scale: 1; } /* Opera */
+@-webkit-viewport { width: device-width; scale: 1; } ?* Safari % Chrome */
+@viewport { width: device-width; scale: 1; } /* w3C Standard */
+
+/* Adjust the padding so it draws on the box interior */
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+    
+    /* Controls the zoom on mobile */
+    
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+    
+    /* Controls the default font size */
+    
+    font-size: 100%; /* 100% = 16px = 1rem */
+}
+
+img { /* images are responsive */
+	width: 100%;
+    display: block;
+}
